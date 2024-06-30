@@ -1,0 +1,13 @@
+<div class="blog-post-list">
+  <ul>
+    {%- for post in collections.posts | reverse -%}
+      <li class="blog-post-item">
+        <a href="{{ post.url | url }}">
+          <h3 class="blog-post-list-title">{{ post.data.title }}</h2>
+        </a>
+        {%- if post.data.description -%}
+          <p class="blog-post-list-description">{{ post.data.description }}</p>
+        {%- endif -%}
+          <time class="blog-post-list-date" datetime="{{ post.date | dateToISO }}">{{ post.date | readableDate }}</time>
+      </li>
+    {%- endfor -%}

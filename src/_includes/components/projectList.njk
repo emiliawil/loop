@@ -1,0 +1,13 @@
+<div class="projects">
+  {%- for project in collections.projects | reverse -%}
+    <a href="{{ project.url | url }}">
+      <div class="project-card">
+        <img src="{{ project.data.thumbnail }}" alt="{{ project.data.title }}">
+        <h2 class="project-card-title">{{ project.data.title }}</h2>
+        {%- if project.data.description -%}
+            <p class="project-card-description">{{ project.data.description }}</p>
+        {%- endif -%}
+      </div>
+    </a>
+  {%- endfor -%}
+</div>

@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+
+<header>
+  <a class="backlink" href="{{ '/projects/' | url }}">&larr; Back to projects</a>
+  <h1 class="project-post-title">{{ title }}</h1>
+</header>
+<main>
+  <article class="project-post">
+  <img class="post-image" src="{{ thumbnail }}" alt="{{ title }}">
+    {{ content | safe }}
+  </article>
+</main>

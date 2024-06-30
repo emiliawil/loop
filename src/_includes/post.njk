@@ -1,0 +1,20 @@
+---
+layout: base.njk
+---
+
+<header>
+  <a class="backlink" href="{{ '/blog/' | url }}">&larr; Back to blog</a>
+  <h1 class="post-title">{{ title }}</h1>
+  {%- if description -%}
+    <p class="post-description">{{ description }}</p>
+  {%- endif -%}
+    <p class="post-meta">
+  <time datetime="{{ page.date | date('yyyy-LL-dd') }}">Published {{ page.date | date("d LLLL yyyy") }}</time>
+</p>
+</header>
+<main>
+  <article class="blog-post">
+  <img class="post-image" src="{{ thumbnail }}" alt="{{ title }}">
+    {{ content | safe }}
+  </article>
+</main>

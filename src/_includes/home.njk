@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+
+<header class="hero">
+  <img src="{{ image }}" alt="{{ title }}">
+  <div>
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+    <a href="/files/cv.pdf" Download><button class="cta">Download CV</button></a>
+  </div>
+</header>
+<main>
+  {{ content | safe }}
+</main>
